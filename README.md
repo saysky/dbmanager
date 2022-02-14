@@ -1,6 +1,7 @@
-- 基于SpringBoot/SSM的脚手架租赁系统
-- 预览地址：[http://material.liuyanzhao.com](http://material.liuyanzhao.com)
-- 详细介绍地址：[https://liuyanzhao.com/shop/material.html](https://liuyanzhao.com/shop/material.html)
+- 基于SpringBoot/SSM的数据库查询平台
+- 预览地址：[http://dbmanager.liuyanzhao.com](http://dbmanager.liuyanzhao.com)
+- 详细介绍地址：[https://liuyanzhao.com/shop/dbmanager.html](https://liuyanzhao.com/shop/dbmanager.html)
+- 代码地址：https://github.com/saysky/dbmanager 或 https://gitee.com/saysky/dbmanager
 - 完成时间：2022年1月
 
 # 一、需求
@@ -33,10 +34,13 @@
 - 5、MySQL
 
 # 三、项目截图
+## 1、公共功能
 1-登录.png
 ![1-登录.png](img/1-登录.png)
 2-个人信息.png
 ![2-个人信息.png](img/2-个人信息.png)
+
+## 2、管理员功能
 3-数据库列表.png
 ![3-数据库列表.png](img/3-数据库列表.png)
 4-数据库编辑.png
@@ -63,6 +67,8 @@
 ![13-数据查询1.png](img/13-数据查询1.png)
 14-数据查询3.png
 ![14-数据查询3.png](img/14-数据查询3.png)
+
+## 3、DBA功能
 15-数据查询.png
 ![15-数据查询.png](img/15-数据查询.png)
 16-数据库管理.png
@@ -74,7 +80,7 @@
 19-用户管理.png
 ![19-用户管理.png](img/19-用户管理.png)
 
-## 用户功能
+## 4、普通员工功能
 20-数据查询1.png
 ![20-数据查询1.png](img/20-数据查询1.png)
 21-数据查询2.png
