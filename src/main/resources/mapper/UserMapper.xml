@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sens.mapper.UserMapper">
+
+    <select id="findByRoleId" resultType="com.example.sens.entity.User">
+      SELECT
+          t.*
+      FROM
+          sys_user_role_ref r,
+          sys_user t
+      WHERE
+          r.role_id = #{roleId} AND
+          r.user_id = t.id
+      ORDER BY
+          t.id DESC
+  </select>
+
+    <select id="findByRoleIdAndCondition" resultType="com.example.sens.entity.User">
+        SELECT
+        t.*
+        FROM
+        sys_user_role_ref r,
+        sys_user t
+        WHERE
+        r.role_id = #{roleId} AND
+        r.user_id = t.id
+        <if test="user.userName != null and user.userName != ''">
+            AND t.user_name LIKE CONCAT('%', #{user.userName}, '%')
+        </if>
+        <if test="user.email != null and user.email != ''">
+            AND t.email LIKE CONCAT('%', #{user.email}, '%')
+        </if>
+        <if test="user.phone != null and user.phone != ''">
+            AND t.phone LIKE CONCAT('%', #{user.phone}, '%')
+        </if>
+        <if test="user.userName != null and user.userName != ''">
+            AND t.user_name LIKE CONCAT('%', #{user.userName}, '%')
+        </if>
+        <if test="user.userDisplayName != null and user.userDisplayName != ''">
+            AND t.user_display_name LIKE CONCAT('%', #{user.userDisplayName}, '%')
+        </if>
+        ORDER BY
+        t.id DESC
+    </select>
+
+
+    <select id="findByCondition" resultType="com.example.sens.entity.User">
+        SELECT
+        t.*
+        FROM
+        sys_user t
+        WHERE
+        1 = 1
+        <if test="user.userName != null and user.userName != ''">
+            AND t.user_name LIKE CONCAT('%', #{user.userName}, '%')
+        </if>
+        <if test="user.email != null and user.email != ''">
+            AND t.email LIKE CONCAT('%', #{user.email}, '%')
+        </if>
+        <if test="user.phone != null and user.phone != ''">
+            AND t.phone LIKE CONCAT('%', #{user.phone}, '%')
+        </if>
+        <if test="user.userDisplayName != null and user.userDisplayName != ''">
+            AND t.user_display_name LIKE CONCAT('%', #{user.userDisplayName}, '%')
+        </if>
+        ORDER BY
+        t.id DESC
+    </select>
+
+
+</mapper>
